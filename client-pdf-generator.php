@@ -27,7 +27,7 @@ function cpdf_enqueue_scripts() {
     error_log('[PDF] Checking page conditions. Current page ID: ' . get_queried_object_id());
 
     // Match your exact client list page slug
-    if (is_page('all-clients')) {
+    if (is_page('create-client')) {
         error_log('[PDF] Loading scripts for client list page');
 
         wp_enqueue_script(
