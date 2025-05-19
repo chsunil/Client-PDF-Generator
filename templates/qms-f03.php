@@ -76,6 +76,17 @@
         }
 
         .footer {
+            position: fixed;
+
+            bottom: -60px;
+
+            left: 0px;
+
+            right: 0px;
+
+            height: 50px;
+
+            font-size: 20px !important;
             text-align: right;
             font-size: 10pt;
             margin-top: 40px;

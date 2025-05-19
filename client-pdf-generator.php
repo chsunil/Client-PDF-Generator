@@ -2,7 +2,7 @@
 /*
 Plugin Name: Client PDF Generator
 Description: Generate Client & QMS PDFs via AJAX using DOMPDF.
-Version:     1.1
+Version:     1.2
 Author:      Sunil
 */
 
