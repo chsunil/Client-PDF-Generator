@@ -25,9 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(data => {
                     if (!data.success) throw new Error(data.data.message || 'Unknown');
                     alert('PDF Ready: ' + data.data.pdf_url);
-                    button.outerHTML = `<a href="${data.data.pdf_url}" target="_blank" class="btn btn-primary btn-sm">
-                              View Agreement
-                            </a>`;
+                    // button.outerHTML = `<a href="${data.data.pdf_url}" target="_blank" class="btn btn-primary btn-sm">
+                    //           View Agreement
+                    //         </a>`;
+                    button.outerHTML = '<object width="100%" height="650" type="application/pdf" data="${data.data.pdf_url}#zoom=95&scrollbar=1" id="pdf_content"></object > ';
                 })
                 .catch(err => {
                     console.error(err);
