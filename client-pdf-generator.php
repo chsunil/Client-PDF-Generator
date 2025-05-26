@@ -67,7 +67,7 @@ function cpdf_handle_generate_pdf() {
     file_put_contents($path, $dompdf->output());
 
     $url = trailingslashit($upload['baseurl']) . "client_pdfs/{$filename}";
-    update_field('generated_pdf_url', $url, $post_id);
+    update_field('f03_pdf', $url, $post_id);
 
     wp_send_json_success(['pdf_url' => $url]);
 }
