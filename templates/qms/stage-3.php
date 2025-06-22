@@ -54,7 +54,7 @@ $data = Dynamic_Fields::get_certification_data($post_id);
 
     <!-- Page 1 -->
     <div class="header">
-        <h1>CERTIFICATION AGREEMENT</h1>
+        <h1>CERTIFICATION AGREEMENT inside</h1>
         <p><strong>GLOBAL MANAGEMENT CERTIFICATION SERVICES PRIVATE LIMITED.</strong><br>
             Flat No. 402, Plot No. 410, Matusri Nagar, Miyapur, Hyderabad – 500 049, India.<br>
             Tel: 040-4855 9001, E-mail: info@mcsglobal.in; Website: www.mcsglobal.in</p>

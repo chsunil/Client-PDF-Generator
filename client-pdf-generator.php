@@ -41,6 +41,9 @@ function cpdf_handle_generate_pdf() {
     }
 
     // 3.2) Capture its output
+    global $post;
+    $post = get_post($post_id);
+    setup_postdata($post);
     set_query_var('cpdf_post_id', $post_id);
     ob_start();
     include $tpl;
@@ -67,7 +70,8 @@ function cpdf_handle_generate_pdf() {
     file_put_contents($path, $dompdf->output());
 
     $url = trailingslashit($upload['baseurl']) . "client_pdfs/{$filename}";
-    update_field('f03_pdf', $url, $post_id);
+    $field_key = "{$stage}_pdf";
+    update_field( $field_key, $url, $post_id);
 
     wp_send_json_success(['pdf_url' => $url]);
 }
